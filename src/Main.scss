@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$color-overlay: rgba(50,50,50,0.2);
+$color-overlay-bottom: #2e424b;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: $color-overlay-bottom;
+
+  > div {
+    height: 100%;
+  }
+}
+
+.App {
+
+  font-family: "Roboto", sans-serif;
+  color: rgba(255,255,255, 0.95);
+
+  a {
+    text-decoration: none;
+  }
+
+  height: 100%;
+  background:
+    linear-gradient($color-overlay 15%, $color-overlay-bottom 85%) no-repeat center top scroll,
+    //linear-gradient($color-overlay, $color-overlay-bottom) no-repeat center top scroll,
+    url('images/bg.jpg') no-repeat center top fixed;
+  background-size: 100% 100%, cover;
+/*   @media only screen and (max-width: 768px) {
+    background-size: contain, 190% auto;
+  } */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-left: none;
+    margin-right: 10px;
+    width: 8px;
+    height: 10px
+  }
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-clip: content-box;
+    background-color: rgba(255,255,255, 0.8);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 2px;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+/*   background-image: linear-gradient($color-overlay, $color-overlay-bottom), url('bg.jpg') ;
+  background-position: center bottom, center top;
+  background-size: 100% 100%, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  min-height: 100%; */
+  
+}
