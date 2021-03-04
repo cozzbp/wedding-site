@@ -1,4 +1,4 @@
-Cozzens for Commissioner React App
+Wedding Site React App
 ============
 
 ## Develop
